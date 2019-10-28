@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title product.title %}
+
+{% block body %}
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+
+                </div>
+                <div class="col-md-4">
+                    <h1>{{ product.title }}</h1>
+                    <div class="text-danger" style="font-weight: bold; font-size: 4rem">
+                        {{ product.price }}
+                    </div>
+                    <a href="#" class="btn btn-primary">Acheter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <p>{{ product.description }}</p>
+    </div>
+
+{% endblock %}
