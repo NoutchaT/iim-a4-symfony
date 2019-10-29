@@ -72,7 +72,7 @@ class User implements UserInterface, \Serializable
      */
     public function getRoles()
     {
-        return ['ROLES_ADMIN'];
+        return ['ROLE_ADMIN'];
     }
 
     /**
@@ -106,7 +106,7 @@ class User implements UserInterface, \Serializable
      */
     public function serialize()
     {
-        return $this->serialize([
+        return serialize([
             $this->id,
             $this->username,
             $this->password

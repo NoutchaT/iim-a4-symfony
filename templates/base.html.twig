@@ -19,6 +19,14 @@
                     <a class="nav-link {% if current_menu is defined and current_menu == "products" %} active {% endif %}" href="{{ path('product.index') }}">Voir les biens</a>
                 </li>
             </ul>
+
+            {% if app.user %}
+                <ul class="navbar">
+                    <li class="nav-item">
+                        <a href="{{ path('logout') }}" class="nav-link">Se déconnecter</a>
+                    </li>
+                </ul>
+            {% endif %}
         </div>
     </nav>
         {% block body %}{% endblock %}

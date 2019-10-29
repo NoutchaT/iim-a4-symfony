@@ -31,8 +31,10 @@ class ProductController extends AbstractController {
         $en = $this->getDoctrine()->getManager();
         $en->persist($product);
         $en->flush(); */
+       $products = $this->repository->findAll();
         return $this->render('product/index.html.twig', [
-            'current_menu' => 'products'
+            'current_menu' => 'products',
+            'products' => $products
         ]);
     }
 
