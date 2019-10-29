@@ -24,13 +24,13 @@ class ProductController extends AbstractController {
      *
      */
     public function index(): Response {
-        $product = new Product();
+       /* $product = new Product();
         $product->setTitle('Iphone 11')
             ->setDescription('646')
             ->setPrice(1000);
         $en = $this->getDoctrine()->getManager();
         $en->persist($product);
-        $en->flush();
+        $en->flush(); */
         return $this->render('product/index.html.twig', [
             'current_menu' => 'products'
         ]);
