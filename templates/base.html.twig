@@ -18,6 +18,9 @@
                 <li class="nav-item active">
                     <a class="nav-link {% if current_menu is defined and current_menu == "products" %} active {% endif %}" href="{{ path('product.index') }}">Voir les biens</a>
                 </li>
+                <li class="nav-item active">
+                    <a class="nav-link {% if current_menu is defined and current_menu == "ordre" %} active {% endif %}" href="{{ path('product.ordre') }}">Ordre</a>
+                </li>
             </ul>
 
             {% if app.user %}

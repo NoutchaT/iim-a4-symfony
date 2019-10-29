@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Ordre' %}
+
+{% block body %}
+
+    <div class="container mt-4">
+        <h1>Ordre des biens</h1>
+        {% for product in products %}
+            <div class="col-3" style="display:inline-block;margin: 20px;">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="{{path('product.show', {id: product.id, slug: product.slug})}}">{{ product.title }}</a>
+                        </h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <div class="text-danger">{{ product.price }} €</div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}

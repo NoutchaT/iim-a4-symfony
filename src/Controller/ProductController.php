@@ -57,4 +57,18 @@ class ProductController extends AbstractController {
             'current_menu' => 'products'
         ]);
     }
+
+    /**
+     * @Route("/products/ordre", name="product.ordre")
+     * @param  Product $product
+     * @return Response
+     */
+    public function ordre():Response
+    {
+        $products = $this->repository->findOrder();
+        return $this->render('product/ordre.html.twig', [
+            'products' => $products,
+            'current_menu' => 'ordre'
+        ]);
+    }
 }
